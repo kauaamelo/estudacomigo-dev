@@ -6,6 +6,8 @@
   --secondary: #0784f2;
   --tertiary: #0028ba;
   --text: #fff;
+
+  --debug: 1px solid red;
 }
 
 * {
@@ -77,5 +79,5 @@ li a:hover {
 
 section {
   background-color: var(--background-secondary);
-  min-height: calc(100vh - 70px);
+  min-height: 100vh;
 }
