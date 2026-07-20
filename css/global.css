@@ -1,9 +1,11 @@
 :root {
   --background: #0f172a;
+  --background-secondary: #010012;
   --surface: #1e293b;
-  --primary: #3b82f6;
-  --secondary: #60a5fa;
-  --text: #f8fafc;
+  --primary: #2563eb;
+  --secondary: #0784f2;
+  --tertiary: #0028ba;
+  --text: #fff;
 }
 
 * {
@@ -24,7 +26,7 @@ header {
   display: flex;
   height: 70px;
   padding: 0 2rem;
-  background-color: var(--background);
+  background-color: var(--background-secondary);
   align-items: center;
   justify-content: space-between;
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
@@ -32,7 +34,7 @@ header {
 
 #logo-header {
   font-size: 1.5rem;
-  color: white;
+  color: var(--text);
   text-decoration: none;
 }
 
@@ -45,7 +47,7 @@ nav ul {
   display: flex;
   align-items: center;
   gap: 6rem;
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   list-style-type: none;
 }
 
@@ -53,7 +55,7 @@ li a {
   display: block;
   padding: 0.3rem 1.2rem;
   text-decoration: none;
-  color: white;
+  color: var(--text);
   transition: 0.3s;
 }
 
@@ -61,13 +63,19 @@ li a:hover {
   color: var(--secondary);
 }
 
-#nav-cadastro {
-  background: #2563eb;
+#nav-register {
+  background: var(--tertiary);
   padding: 0.7rem 1.4rem;
-  color: white;
+  color: var(--text);
   border-radius: 10px;
 }
 
-#nav-cadastro:hover {
-  background: var(--secondary);
+#nav-register:hover {
+  background: var(--primary);
+  color: var(--text);
+}
+
+section {
+  background-color: var(--background-secondary);
+  min-height: calc(100vh - 70px);
 }
