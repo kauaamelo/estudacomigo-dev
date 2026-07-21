@@ -1,0 +1,157 @@
+#register {
+  display: flex;
+  align-items: center;
+}
+
+.register-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3rem;
+}
+
+.register-content {
+  flex: 1;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.register-content h2 {
+  color: var(--text);
+  font-size: 3rem;
+  line-height: 1.1;
+}
+
+.register-content p {
+  color: var(--text);
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+#register-form {
+  flex: 0.8;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  background: var(--background);
+  padding: 1.5rem;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+#register-form label {
+  color: var(--text);
+  font-weight: 600;
+}
+
+#register-form input,
+#register-form select {
+  width: 100%;
+  padding: 0.7rem 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 10px;
+  background: var(--background-secondary);
+  color: var(--text);
+  font-size: 1rem;
+  outline: none;
+  transition: 0.3s;
+}
+
+#register-form input::placeholder {
+  color: rgba(255, 255, 255, 0.45);
+}
+
+#register-form input:focus,
+#register-form select:focus {
+  border-color: var(--secondary);
+  box-shadow: 0 0 0 3px rgba(7, 132, 242, 0.2);
+}
+
+#register-form button {
+  margin-top: 1rem;
+  background: var(--tertiary);
+  color: var(--text);
+  border: none;
+  border-radius: 10px;
+  padding: 1rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#register-form button:hover {
+  background: var(--primary);
+}
+
+.modal {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.7);
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s;
+}
+
+.modal.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal-content {
+  width: 90%;
+  max-width: 500px;
+  background: var(--background);
+  color: var(--text);
+  padding: 2rem;
+  border-radius: 20px;
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  animation: modal 0.3s ease;
+}
+
+.modal-content h2 {
+  margin-bottom: 1rem;
+}
+
+.modal-content p {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.modal-content button {
+  margin-top: 1rem;
+  padding: 0.9rem 2rem;
+  border: none;
+  border-radius: 10px;
+  background: var(--tertiary);
+  color: var(--text);
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.modal-content button:hover {
+  background: var(--primary);
+}
+
+@keyframes modal {
+  from {
+    transform: translateY(-30px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
